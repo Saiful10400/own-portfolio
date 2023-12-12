@@ -8,8 +8,8 @@ const Root = () => {
   <li><NavLink to={"/blogs"}>Blog</NavLink></li>
   </>
   return (
-    <div className="lg:w-[1400px] lg:mx-auto ">
-        <div className="navbar bg-base-100">
+    <div className="lg:w-[1400px] lg:mx-auto relative z-20">
+        <div className="navbar bg-base-100 absolute top-0 left-0">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -46,7 +46,7 @@ const Root = () => {
         <a className="btn">Button</a>
       </div>
     </div>
-   <div className="mx-3 lg:mx-0">
+   <div className="mx-3 lg:mx-0 relative -z-10">
    <Outlet></Outlet>
    </div>
     </div>
