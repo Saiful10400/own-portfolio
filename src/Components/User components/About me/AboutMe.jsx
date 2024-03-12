@@ -16,7 +16,7 @@ const AboutMe = () => {
     { type: "Mongo db", level: 72 },
   ];
   return (
-    <div>
+    <div className="mb-8">
       <div className="overflow-y-hidden">
         <div
           data-aos="fade-up"
@@ -35,7 +35,7 @@ const AboutMe = () => {
         </div>
       </div>
       {/* about me sectin */}
-      <div className="mt-8">
+      <div data-aos="fade-zoom-in" data-aos-duration="2000" className="mt-8">
         <h1 className="text-2xl lg:text-2xl font-bold text-yellow-500">
           ABOUT ME
         </h1>

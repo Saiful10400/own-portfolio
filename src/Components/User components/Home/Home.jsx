@@ -1,7 +1,11 @@
 import { Typewriter } from "react-simple-typewriter";
 import saiful from "../../../../public/bgRemovedSaiful.png";
 import download from "../../../../public/download.gif";
-import cv from "../../../../public/dummy.pdf"
+import cv from "../../../../public/Cv of Saiful islam .pdf"
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // You can also use <link> for styles
+// ..
+AOS.init();
 const Home = () => {
   const words = [
     "TAILWIND CSS",
@@ -13,8 +17,8 @@ const Home = () => {
     "NEXT JS",
   ];
   return (
-    <div className="flex lg:flex-row justify-center gap-8 flex-col-reverse">
-      <div className=" w-full lg:w-1/2 lg:min-h-[100vh] flex flex-col justify-center items-start  ">
+    <div className="flex lg:flex-row justify-center gap-8 flex-col-reverse overflow-x-hidden">
+      <div data-aos="fade-right" data-aos-duration="2000" className=" w-full lg:w-1/2 lg:min-h-[100vh] flex flex-col justify-center items-start  ">
         <h1 className="lg:text-6xl text-3xl font-bold">{"HI, I'M SAIFUL!"}</h1>
         {/* <h1 className="text-3xl font-bold">ENTHUSIAST IN WEB-APP DEVELOPMENT</h1> */}
         <div className="lg:text-5xl text-2xl mt-3 text-white font-bold">
@@ -45,10 +49,12 @@ const Home = () => {
           </button></a>
         </div>
       </div>
-      <div className=" w-full lg:w-1/2 lg:mt-0 mt-32 lg:min-h-[100vh] flex justify-center items-center  ">
+      
+      <div data-aos="fade-left" data-aos-duration="2000"  className=" w-full lg:w-1/2 lg:mt-0 mt-32 lg:min-h-[100vh] flex justify-center items-center  ">
         <div className="lg:w-[500px] w-[300px]  lg:h-[500px] h-[300px] bg-yellow-400 flex justify-center overflow-hidden items-center rounded-full">
           <img className="w-full h-full object-contain" src={saiful} />
         </div>
+      
       </div>
     </div>
   );

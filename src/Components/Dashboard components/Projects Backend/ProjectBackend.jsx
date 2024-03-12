@@ -41,6 +41,8 @@ const ProjectBackend = () => {
     const technology = form.technology.value;
     const summery = form.summery.value;
     const duration = form.duration.value;
+    const liveLink = form.liveLink.value;
+    const repoLink = form.repoLink.value;
     const startingDate = form.startingDate.value;
     if (thambnail && cover) {
       const thumbnailfile = new FormData();
@@ -70,7 +72,7 @@ const ProjectBackend = () => {
             const coverUrl=res.data.url
             
             // posting project data into mongo db. database.
-            axiosPublic.post("/post_projects",{ProjectName,title,about,technology,summery,duration,startingDate,thambnailUrl,coverUrl})
+            axiosPublic.post("/post_projects",{ProjectName,title,about,technology,liveLink,repoLink,summery,duration,startingDate,thambnailUrl,coverUrl})
             .then(res=>alert(res.data))
 
           })
@@ -159,6 +161,8 @@ const ProjectBackend = () => {
           placeholder="When you start your project?"
           className={inputStyle}
         />
+        <input name="liveLink" required type="text" className={inputStyle} placeholder="LIve link URL" />
+        <input name="repoLink" required type="text" className={inputStyle} placeholder="Github repo link" />
         <button type="submit" className="btn btn-primary btn-md">Post</button>
       </form>
     </div>

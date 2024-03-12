@@ -8,6 +8,7 @@ import DashboardRoot from "./Components/Dashboard components/DashboardRoot"
 import ProjectBackend from "./Components/Dashboard components/Projects Backend/ProjectBackend"
 import BlogBackend from "./Components/Dashboard components/Blog Backend/BlogBackend"
 import AboutMe from "./Components/User components/About me/AboutMe"
+import Project from "./Components/User components/Projects/Project"
 
 export const router=createBrowserRouter([
     {
@@ -22,6 +23,10 @@ export const router=createBrowserRouter([
             {
                 path:"Projects",
                 element:<Projects></Projects>
+            },
+            {
+                path:"Projects/:id",
+                element:<Project></Project>
             },
             {
                 path:"blogs",

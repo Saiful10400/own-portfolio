@@ -4,6 +4,7 @@ import { FaArrowRight } from "react-icons/fa6";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Link } from "react-router-dom";
+import loading from "../../../../public/loading.gif"
 AOS.init();
 const Projects = () => {
   const axiosPublic = useAxiosPublic();
@@ -11,16 +12,20 @@ const Projects = () => {
   useEffect(() => {
     axiosPublic.get("get_projects").then((res) => setData(res.data));
   }, [axiosPublic]);
-  console.log(data);
+   
   return (
-    <div className="min-h-[100vh] pt-32 text-white">
+    <div className="min-h-[100vh] pt-32 text-white mb-8">
       {/* all rojects */}
       <div>
         <div className="h-[20vh]">
           <h1 className="text-4xl text-center font-bold">PORTFOLIO</h1>
-          <h1></h1>
+           
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        {
+          !data?<div className="w-full h-full  flex justify-center items-center">
+          <img  src={loading} alt="" />
+          </div>:<div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+          
           {data?.map((item) => (
             <div
               data-aos="zoom-in"
@@ -45,6 +50,7 @@ const Projects = () => {
             </div>
           ))}
         </div>
+        }
       </div>
     </div>
   );
