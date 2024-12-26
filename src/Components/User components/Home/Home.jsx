@@ -9,12 +9,11 @@ AOS.init();
 const Home = () => {
   const words = [
     "TAILWIND CSS",
-    "JAVASCRIPT",
-    "REACT",
-    "NODE JS",
-    "EXPRESS JS",
-    "MONGO DB",
+    "Redux",
     "NEXT JS",
+    "Prisma",
+    "NODE JS",
+    "MONGO DB",
   ];
   return (
     <div className="flex lg:flex-row justify-center gap-8 flex-col-reverse overflow-x-hidden">
